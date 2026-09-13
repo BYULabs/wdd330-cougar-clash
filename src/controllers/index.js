@@ -2,7 +2,7 @@ import CFBDService from '../services/cfbdService.js';
 import SportsDBService from '../services/sportsDbService.js';
 
 /**
- * Renders the primary Cougar Conquest homepage with schedule tracking and matchup metrics.
+ * Renders the primary Cougar Clash homepage with schedule tracking and matchup metrics.
  */
 const getHomePage = async (req, res) => {
   try {
@@ -62,11 +62,11 @@ const getHomePage = async (req, res) => {
     const awayGamesCount = schedule.filter(g => !g.isHome).length;
 
     tickerItems.push(`📊 ${year} CAMPAIGN: ${schedule.length} Total Games (${homeGamesCount} Home / ${awayGamesCount} Away)`);
-    tickerItems.push(`⚔️ COUGAR CONQUEST: Track historical head-to-head records and upcoming battles`);
+    tickerItems.push(`⚔️ COUGAR CLASH: Track historical head-to-head records and upcoming battles`);
 
     // 7. Render EJS view with updated metadata
     res.render('index', {
-      title: `Cougar Conquest | BYU Football ${year} Schedule & Rivalry Portal`,
+      title: `Cougar Clash | BYU Football ${year} Schedule & Rivalry Portal`,
       year,
       nextGame,
       schedule,
@@ -79,11 +79,11 @@ const getHomePage = async (req, res) => {
     
     // Fallback data for error states
     res.render('index', {
-      title: 'Cougar Conquest | BYU Football Portal',
+      title: 'Cougar Clash | BYU Football Portal',
       year: 2026,
       nextGame: null,
       schedule: [],
-      tickerItems: ['⚔️ Cougar Conquest — BYU Football Schedule & Rivalry Portal'],
+      tickerItems: ['⚔️ Cougar Clash — BYU Football Schedule & Rivalry Portal'],
       page: 'home' 
     });
   }

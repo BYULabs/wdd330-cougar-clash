@@ -1,8 +1,8 @@
-# CougarHype 🐾🏈
+# Cougar Clash 🐾🏈
 
-> **Live Application:** [cougarhype.onrender.com](https://cougarhype.onrender.com/)
+> **Live Application:** [cougar.itusebastian.com](https://cougar.itusebastian.com/)
 
-**CougarHype** is a full-stack Express.js web application built to bring high-energy sports data, game analytics, and team insights together in one seamless portal. By leveraging third-party sports APIs (College Football Data API and TheSportsDB API), CougarHype provides dynamic views, schedules, and stats rendered server-side via EJS.
+**Cougar Clash** is a full-stack Express.js web application built to bring high-energy sports data, game analytics, and team insights together in one seamless portal. By leveraging third-party sports APIs (College Football Data API and TheSportsDB API), Cougar Clash provides dynamic views, schedules, and stats rendered server-side via EJS.
 
 ---
 
@@ -20,7 +20,7 @@
 
 - **Backend:** Node.js, Express.js
 - **Frontend / Templating:** EJS (Embedded JavaScript), Vanilla JavaScript, CSS3
-- **Services & APIs:** 
+- **Services & APIs:**
   - [College Football Data API (CFBD)](https://collegefootballdata.com/)
   - [TheSportsDB API](https://www.thesportsdb.com/)
 - **Hosting / PaaS:** [Render](https://render.com)
@@ -30,7 +30,7 @@
 ## 📂 Project Structure
 
 ```text
-cougarhype/
+wdd330-cougar-clash/
 ├── public/                 # Static assets directory
 │   ├── css/
 │   │   └── main.css        # Application styling
@@ -66,24 +66,28 @@ cougarhype/
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
+
 - [Node.js](https://nodejs.org/) (v16+ recommended)
 - [npm](https://www.npmjs.com/) (bundled with Node.js)
 
 ### Installation Steps
 
 1. **Clone the Repository:**
+
    ```bash
-   git clone https://github.com/BYULabs/cougarhype.git
-   cd cougarhype
+   git clone https://github.com/BYULabs/wdd330-cougar-clash.git
+   cd wdd330-cougar-clash
    ```
 
 2. **Install Dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Environment Variables Configuration:**
    Create a `.env` file in the root of the project (or set variables in your server environment):
+
    ```env
    PORT=3000
    CFBD_API_KEY=your_college_football_data_api_key
@@ -109,6 +113,7 @@ Ensure you have the following installed on your machine:
 This application is deployed as a Web Service on **Render**.
 
 ### Environment Setup on Render:
+
 1. Connect your repository to Render.
 2. Set the build and start commands:
    - **Build Command:** `npm install`

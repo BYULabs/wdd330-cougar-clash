@@ -21,7 +21,7 @@ app.use(express.json());
 
 // Session secret fallback intended for local development; override via ENV in production
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'cougarstats_secret_key',
+  secret: process.env.SESSION_SECRET || 'cougarclash_secret_key',
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 60000 }
@@ -110,7 +110,7 @@ app.use((err, req, res, next) => {
 
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
-    console.log(`CougarStats MVC Server running on http://localhost:${PORT}`);
+    console.log(`Cougar Clash MVC Server running on http://localhost:${PORT}`);
   });
 }
 
