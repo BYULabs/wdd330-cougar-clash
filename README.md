@@ -12,7 +12,7 @@
 - **Server-Side Rendering:** Clean component-based rendering powered by **EJS** templates and modular partials.
 - **Modular Architecture:** Clean separation of concerns adhering to the MVC pattern (Controllers, Services, Views, Routes).
 - **Custom Error Handling:** Dedicated error handling middleware and polished 404/500 view pages.
-- **Production Ready:** Optimized and configured for seamless continuous deployment on **Render**.
+- **Production Ready:** Optimized and configured for seamless continuous deployment on **Vercel**.
 
 ---
 
@@ -23,7 +23,7 @@
 - **Services & APIs:**
   - [College Football Data API (CFBD)](https://collegefootballdata.com/)
   - [TheSportsDB API](https://www.thesportsdb.com/)
-- **Hosting / PaaS:** [Render](https://render.com)
+- **Hosting / PaaS:** [Vercel](https://vercel.com)
 
 ---
 
@@ -108,17 +108,24 @@ Ensure you have the following installed on your machine:
 
 ---
 
-## ☁️ Deployment on Render
+## ☁️ Deployment on Vercel
 
-This application is deployed as a Web Service on **Render**.
+This application is deployed as a Web Service on **Vercel**.
 
-### Environment Setup on Render:
+### Environment Setup on Vercel:
 
-1. Connect your repository to Render.
-2. Set the build and start commands:
-   - **Build Command:** `npm install`
-   - **Start Command:** `node server.js`
-3. Add any required environment keys (such as `CFBD_API_KEY`) under **Environment Variables**.
+1. Import your repository into Vercel.
+2. Vercel automatically detects Node.js projects and sets `npm install` as the build step.
+3. Configure your server entry point:
+   - **For Express/Node APIs:** Route requests through a Serverless Function by creating a `vercel.json` file in your root directory:
+     ```json
+     {
+       "rewrites": [
+         { "source": "/(.*)", "destination": "/server.js" }
+       ]
+     }
+     ```
+4. Add any required environment keys (such as `CFBD_API_KEY`) under **Settings > Environment Variables**.
 
 ---
 
